@@ -1,28 +1,10 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
-const Page = () => {
+const Page = ({ data }) => {
   const {
     allNyTimesArticles: { nodes }
-  } = useStaticQuery(graphql`
-    query MyQuery {
-      allNyTimesArticles(
-        filter: {
-          pub_date: { eq: "1980-11-23T05:00:00+0000" }
-          abstract: { ne: "" }
-        }
-      ) {
-        nodes {
-          pub_date
-          headline {
-            main
-          }
-          abstract
-          web_url
-        }
-      }
-    }
-  `);
+  } = data;
 
   return (
     <main className="container mx-auto max-w-5xl grid gap-16 p-8">
@@ -89,5 +71,25 @@ const Page = () => {
     </main>
   );
 };
+
+export const query = graphql`
+  {
+    allNyTimesArticles(
+      filter: {
+        pub_date: { eq: "1980-11-23T05:00:00+0000" }
+        abstract: { ne: "" }
+      }
+    ) {
+      nodes {
+        pub_date
+        headline {
+          main
+        }
+        abstract
+        web_url
+      }
+    }
+  }
+`;
 
 export default Page;
