@@ -20,7 +20,7 @@ exports.sourceNodes = async ({
       ...item,
       id: item._id,
       internal: {
-        type: 'NyTimesArticles',
+        type: 'NyTimesArticle',
         contentDigest: createContentDigest(item)
       }
     });

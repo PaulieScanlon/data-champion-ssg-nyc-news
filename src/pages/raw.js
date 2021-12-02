@@ -11,7 +11,7 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   {
-    allNyTimesArticles(
+    allNyTimesArticle(
       filter: {
         pub_date: { eq: "1980-11-23T05:00:00+0000" }
         abstract: { ne: "" }
