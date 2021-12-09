@@ -11,9 +11,11 @@ exports.sourceNodes = async ({
   actions: { createNode },
   createContentDigest
 }) => {
-  const data = await fetch(
+  const response = await fetch(
     `https://api.nytimes.com/svc/archive/v1/${YEAR}/${MONTH}.json?api-key=${process.env.NY_TIMES_ARCHIVE_API}`
-  ).then((res) => res.json());
+  );
+
+  const data = await response.json();
 
   data.response.docs.forEach((item) => {
     createNode({
