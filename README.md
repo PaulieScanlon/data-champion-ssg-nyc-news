@@ -1,8 +1,8 @@
 # TBC
 
-👀 See the preview: [https://](https://)
+👀 See the preview: [https://datachampionssgnycnews.gatsbyjs.io](https://datachampionssgnycnews.gatsbyjs.io/)
 
-📝 Read the post on the Gatsby Blog: [...](https://)
+📝 Read the post on the Gatsby Blog: [Fetch data from the New York Times API using SSG](https://www.gatsbyjs.com/blog/fetch-data-from-the-new-york-times-api-using-ssg)
 
 ⚙️ This repo is based on [Gatsby's minimal demo](https://github.com/gatsby-inc/gatsby-demo-minimal)
 
