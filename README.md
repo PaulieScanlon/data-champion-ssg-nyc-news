@@ -1,4 +1,4 @@
-# TBC
+# Fetch data from the New York Times API using SSG
 
 👀 See the preview: [https://datachampionssgnycnews.gatsbyjs.io](https://datachampionssgnycnews.gatsbyjs.io/)
 
